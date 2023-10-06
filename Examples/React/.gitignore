@@ -67,4 +67,4 @@ yarn-error.log
 
 # PodsToBuild
 ios/Vendor/*
-!ios/Vendor/Podspecs/
+!ios/Vendor/Podspecs

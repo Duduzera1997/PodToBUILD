@@ -1,15 +1,31 @@
 new_pod_repository(
-  name = "boost-for-react-native",
-  url = "https://github.com/react-native-community/boost-for-react-native/archive/v1.63.0-1.zip",
-  podspec_url = "Vendor/Podspecs/boost-for-react-native.podspec.json",
+  name = "DoubleConversion",
+  url = 'https://github.com/google/double-conversion/archive/v1.1.6.zip',
+  podspec_url = 'Vendor/React/third-party-podspecs/DoubleConversion.podspec',
+  install_script = """
+    # prepare_command
+    mv src double-conversion
+    __INIT_REPO__
+  """
+)
+new_pod_repository(
+  name = "RCT-Folly",
+  podspec_url = "Vendor/React/third-party-podspecs/RCT-Folly.podspec",
   generate_header_map = 1
 )
 new_pod_repository(
-  name = "DoubleConversion",
-  url = "https://github.com/google/double-conversion/archive/v1.1.5.zip",
-  podspec_url = "Vendor/React/third-party-podspecs/DoubleConversion.podspec",
+  name = "boost",
+  url = "https://github.com/react-native-community/boost-for-react-native/archive/v1.63.0-0.zip",
+  podspec_url = "Vendor/React/third-party-podspecs/boost.podspec",
   generate_header_map = 1
 )
+new_pod_repository(
+  name = "CocoaAsyncSocket",
+  url = "https://github.com/robbiehanson/CocoaAsyncSocket/archive/7.6.5.zip",
+  podspec_url = "Vendor/Podspecs/CocoaAsyncSocket.podspec.json",
+  generate_header_map = 1
+)
+
 new_pod_repository(
   name = "FBLazyVector",
   url = "Vendor/React/Libraries/FBLazyVector",
@@ -17,13 +33,62 @@ new_pod_repository(
 )
 new_pod_repository(
   name = "FBReactNativeSpec",
-  url = "Vendor/React/Libraries/FBReactNativeSpec",
+  # url = "Vendor/React/React/FBReactNativeSpec",
+  podspec_url = "Vendor/Podspecs/FBReactNativeSpec.podspec.json",
   generate_header_map = 1
 )
 new_pod_repository(
-  name = "Folly",
-  url = "https://github.com/facebook/folly/archive/v2016.09.26.00.zip",
-  podspec_url = "Vendor/React/third-party-podspecs/Folly.podspec",
+  name = "Flipper",
+  url = "https://github.com/facebook/flipper/archive/v0.221.0.zip",
+  podspec_url = "Vendor/Flipper/iOS/Podspecs/Flipper.podspec.json",
+  generate_header_map = 1
+)
+new_pod_repository(
+  name = "Flipper-Boost-iOSX",
+  url = "https://github.com/priteshrnandgaonkar/Flipper-Boost-iOSX/archive/1.76.0.1.11.zip",
+  podspec_url = "Vendor/Flipper/iOS/Podspecs/Flipper-Boost-iOSX.podspec",
+  generate_header_map = 1
+)
+new_pod_repository(
+  name = "Flipper-DoubleConversion",
+  url = "https://github.com/lblasa/double-conversion/archive/flipper-double-conversion-v3.2.0.1.zip",
+  podspec_url = "Vendor/Flipper/iOS/Podspecs/Flipper-DoubleConversion.podspec",
+  generate_header_map = 1
+)
+new_pod_repository(
+  name = "Flipper-Fmt",
+  url = "https://github.com/priteshrnandgaonkar/fmt/archive/7.1.7.zip",
+  podspec_url = "Vendor/Flipper/iOS/Podspecs/Flipper-Fmt.podspec",
+  generate_header_map = 1
+)
+new_pod_repository(
+  name = "Flipper-Folly",
+  url = "https://github.com/facebook/folly/archive/v2021.06.14.00.zip",
+  podspec_url = "Vendor/Flipper/iOS/Podspecs/Flipper-Folly.podspec",
+  generate_header_map = 1
+)
+new_pod_repository(
+  name = "Flipper-Glog",
+  url = "https://github.com/lblasa/glog/archive/flipper-glog-v0.5.0.5.zip",
+  podspec_url = "Vendor/Flipper/iOS/Podspecs/Flipper-Glog.podspec",
+  generate_header_map = 1
+)
+new_pod_repository(
+  name = "Flipper-PeerTalk",
+  url = "https://github.com/priteshrnandgaonkar/peertalk/archive/v0.0.3.zip",
+  podspec_url = "Vendor/Flipper/iOS/Podspecs/Flipper-PeerTalk.podspec",
+  generate_header_map = 1
+)
+new_pod_repository(
+  name = "FlipperKit",
+  url = "https://github.com/facebook/flipper/archive/v0.221.0.zip",
+  podspec_url = "Vendor/Flipper/iOS/Podspecs/FlipperKit.podspec",
+  generate_header_map = 1
+)
+new_pod_repository(
+  name = "fmt",
+  url = "https://github.com/fmtlib/fmt/archive/7.1.3.zip",
+  podspec_url = "Vendor/Podspecs/fmt.podspec.json",
   generate_header_map = 1
 )
 new_pod_repository(
@@ -32,6 +97,25 @@ new_pod_repository(
   podspec_url = "Vendor/React/third-party-podspecs/glog.podspec",
   generate_header_map = 1
 )
+new_pod_repository(
+  name = "hermes-engine",
+  url = "https://github.com/facebook/hermes/archive/refs/tags/hermes-2023-03-20-RNv0.72.0-49794cfc7c81fb8f69fd60c3bbf85a7480cc5a77.tar.gz",
+  podspec_url = "Vendor/Podspecs/hermes-engine.podspec.json",
+  generate_header_map = 1
+)
+new_pod_repository(
+  name = "libevent",
+  url = "https://github.com/libevent/libevent/archive/release-2.1.12-stable.zip",
+  podspec_url = "Vendor/Flipper/iOS/Podspecs/libevent.podspec",
+  generate_header_map = 1
+)
+new_pod_repository(
+  name = "OpenSSL-Universal",
+  url = "https://github.com/krzyzanowskim/OpenSSL/archive/1.1.1100.zip",
+  # podspec_url = "Vendor/OpenSSL-Universal/OpenSSL-Universal.podspec",
+  generate_header_map = 1
+)
+
 new_pod_repository(
   name = "RCTRequired",
   url = "Vendor/React/Libraries/RCTRequired",
@@ -53,6 +137,12 @@ new_pod_repository(
   generate_header_map = 1
 )
 new_pod_repository(
+  name = "React-Codegen",
+  # url = "build/generated/ios",
+  podspec_url = "Vendor/Podspecs/React-Codegen.podspec.json",
+  generate_header_map = 1
+)
+new_pod_repository(
   name = "React-Core",
   url = "Vendor/React",
   generate_header_map = 1
@@ -65,6 +155,16 @@ new_pod_repository(
 new_pod_repository(
   name = "React-cxxreact",
   url = "Vendor/React/ReactCommon/cxxreact",
+  generate_header_map = 1
+)
+new_pod_repository(
+  name = "React-debug",
+  url = "Vendor/React/ReactCommon/react/debug",
+  generate_header_map = 1
+)
+new_pod_repository(
+  name = "React-hermes",
+  url = "Vendor/React/ReactCommon/hermes",
   generate_header_map = 1
 )
 new_pod_repository(
@@ -83,6 +183,21 @@ new_pod_repository(
   generate_header_map = 1
 )
 new_pod_repository(
+  name = "React-logger",
+  url = "Vendor/React/ReactCommon/logger",
+  generate_header_map = 1
+)
+new_pod_repository(
+  name = "React-NativeModulesApple",
+  url = "Vendor/React/ReactCommon/react/nativemodule/core/platform/ios",
+  generate_header_map = 1
+)
+new_pod_repository(
+  name = "React-perflogger",
+  url = "Vendor/React/ReactCommon/reactperflogger",
+  generate_header_map = 1
+)
+new_pod_repository(
   name = "React-RCTActionSheet",
   url = "Vendor/React/Libraries/ActionSheetIOS",
   generate_header_map = 1
@@ -90,6 +205,11 @@ new_pod_repository(
 new_pod_repository(
   name = "React-RCTAnimation",
   url = "Vendor/React/Libraries/NativeAnimation",
+  generate_header_map = 1
+)
+new_pod_repository(
+  name = "React-RCTAppDelegate",
+  url = "Vendor/React/Libraries/AppDelegate",
   generate_header_map = 1
 )
 new_pod_repository(
@@ -128,12 +248,45 @@ new_pod_repository(
   generate_header_map = 1
 )
 new_pod_repository(
+  name = "React-rncore",
+  # url = "Vendor/React/ReactCommon",
+  podspec_url = "Vendor/Podspecs/React-rncore.podspec.json",
+  generate_header_map = 1
+)
+new_pod_repository(
+  name = "React-runtimeexecutor",
+  url = "Vendor/React/ReactCommon/runtimeexecutor",
+  generate_header_map = 1
+)
+new_pod_repository(
+  name = "React-runtimescheduler",
+  url = "Vendor/React/ReactCommon/react/renderer/runtimescheduler",
+  generate_header_map = 1
+)
+new_pod_repository(
+  name = "React-utils",
+  url = "Vendor/React/ReactCommon/react/utils",
+  generate_header_map = 1
+)
+new_pod_repository(
   name = "ReactCommon",
   url = "Vendor/React/ReactCommon",
   generate_header_map = 1
 )
 new_pod_repository(
+  name = "SocketRocket",
+  url = "https://github.com/facebookincubator/SocketRocket/archive/0.7.0.zip",
+  podspec_url = "Vendor/Podspecs/SocketRocket.podspec.json",
+  generate_header_map = 1
+)
+new_pod_repository(
   name = "Yoga",
   url = "Vendor/React/ReactCommon/yoga",
+  generate_header_map = 1
+)
+new_pod_repository(
+  name = "YogaKit",
+  url = "https://github.com/facebook/yoga/archive/v2.0.0.zip",
+  podspec_url = "Vendor/Podspecs/YogaKit.podspec",
   generate_header_map = 1
 )
