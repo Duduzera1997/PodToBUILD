@@ -41,4 +41,4 @@ download_react_if_necessary() {
 
 trap cleanup EXIT
 download_react_if_necessary
-make update_xcodeproj gen_podfile_deps
+# make update_xcodeproj gen_podfile_deps
